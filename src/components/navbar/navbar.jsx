@@ -1,4 +1,4 @@
-import React, { useCallback, useRef, useState, useEffect} from 'react';
+import { useCallback, useRef, useState, useEffect} from 'react';
 import { NavbarRoutes } from '@lib/routes';
 import { textGlitch } from '@lib/animations/text-effect';
 

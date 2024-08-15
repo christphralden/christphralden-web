@@ -1,4 +1,3 @@
-import { gsapProvider } from "./gsap";
 const alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" 
 
 export async function textGlitch({
