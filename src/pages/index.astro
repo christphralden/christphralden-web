@@ -3,10 +3,34 @@ import Layout from "@layouts/layout.astro"
 ---
 
 <Layout title="Christpher Alden">
-    <section>
-        <h1>Christopher Alden</h1>
+    <section class="w-full h-screen flex flex-col justify-center items-center gap-16">
+        <div class="w-fit flex flex-col justify-center items-center">
+            <h1 class="text-9xl tracking-tighter uppercase font-medium">Christopher Alden</h1>
+            <h2 class="text-xl">
+                <span data-text="Full-stack developer & Designer" id="description" class="uppercase text-xl">&nbsp;</span>
+            </h2>
+
+        </div>
+        <button class="uppercase px-8 py-2 border-2 bg-black">
+            <span class="text-white tracking-wider">Continue</span>
+        </button>
     </section>
 </Layout>
 
-<style>
-</style>
+<script>
+    import { textGlitch } from "@lib/animations/text-effect";
+
+    document.addEventListener('DOMContentLoaded', ()=>{
+        const description = document.getElementById('description') as HTMLElement
+        const descriptionText = description.dataset.text as string
+        textGlitch({
+            text: descriptionText,
+            duration: 40,
+            glitch: 2,
+            hidden: true,
+            callbackFn: (newText)=>{
+                description.innerText = newText
+            }
+        })
+    })
+</script>

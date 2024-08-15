@@ -24,29 +24,32 @@ export async function textGlitch({
     text: string;
     duration?: number;
     glitch: number;
-    hidden: boolean;
+    hidden?: boolean;
     callbackFn: (text: string) => any;
 }) {
     const size = text.length;
     const initial = text
-    let memoizedText = [...initial];
-
+    let memoizedText: string[] = []
+    if(!hidden){
+        memoizedText = [...initial];
+    }
     const firstPassDuration = duration / 2;
 
     let y = 1;
-    const initialIntervalId = setInterval(() => {
-        if (y >= size) {
-            clearInterval(initialIntervalId);
-            return
-        }
-
-        const randomCharacter = alphabets[Math.floor(Math.random() * alphabets.length)];
-        memoizedText[y] = hidden ? ' ' : randomCharacter;
-        callbackFn(memoizedText.join(''));
-        y++;
-    }, firstPassDuration);
-
-    let i = 1;
+        const initialIntervalId = setInterval(() => {
+            if(!hidden){
+                if (y >= size) {
+                    clearInterval(initialIntervalId);
+                    return
+                }
+                const randomCharacter = alphabets[Math.floor(Math.random() * alphabets.length)];
+                memoizedText[y] = hidden ? ' ' : randomCharacter;
+                callbackFn(memoizedText.join(''));
+            }
+            y++;
+        }, firstPassDuration);
+    
+    let i = hidden ? 0 : 1;
     let j = 0;
 
     const intervalId = setInterval(() => {
