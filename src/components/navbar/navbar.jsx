@@ -26,8 +26,8 @@ export const Navbar = () => {
     }, [])
     
     return (
-        <nav className="fixed w-full h-20 flex justify-center">
-            <div className="w-[90vw] h-full flex items-center justify-between z-10 bg-background gap-8">
+        <nav className="fixed w-full h-20 flex justify-center px-16">
+            <div className="w-full h-full flex items-center justify-between z-10 bg-background gap-8">
                 <div className="w-full flex justify-start gap-8 xl:gap-16">
                     {NavbarRoutes.map((routes, i) => {
                         const isActive = current == routes.route

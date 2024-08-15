@@ -20,7 +20,7 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<Navbar client:load/>
-		<div class="bg-background justify-start min-h-[100dvh] flex flex-col">
+		<div class="bg-background justify-start min-h-[100dvh] flex flex-col w-screen">
 			<slot />
 		</div>
 	</body>
@@ -50,10 +50,10 @@ const { title } = Astro.props;
 		background: #0000FF
 	}
 	:root {
-		box-sizing: border-box;
 		min-height: min;
 	}
 	*{
+		box-sizing: border-box;
 		user-select: text;
 	}
 	a {
@@ -61,6 +61,12 @@ const { title } = Astro.props;
 	}
 	html {
 		font-family: 'Montreal', monospace;
+	}
+	input{
+		all: unset;
+	}
+	button{
+		all:unset
 	}
 </style>
 
