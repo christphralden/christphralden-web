@@ -1,6 +1,5 @@
 ---
-import Navbar from '@components/navbar/navbar.astro';
-
+import {Navbar} from '@components/navbar';
 interface Props {
 	title: string;
 }
@@ -19,7 +18,7 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-	<Navbar/>
+	<Navbar client:load/>
     <div class="bg-background justify-start pt-24 min-h-[100dvh] flex flex-col">
 		<slot />
     </div>
