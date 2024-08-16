@@ -4,8 +4,8 @@ export const NavbarRoutes = [
         route:["/"]
     },
     {
-        name:"projects",
-        route:["/projects/professional/"]
+        name:"works",
+        route:["/works/professional/"]
     },
     {
         name:"experience",
