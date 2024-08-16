@@ -11,7 +11,7 @@ const date = new Date().toLocaleString('en-US', {
 
 ---
 
-<Layout>
+<Layout className="overflow-hidden">
     <div class="w-full h-screen flex flex-col px-16 py-8">
         <section class="w-full h-full flex flex-col flex-shrink justify-center items-center gap-16">
             <div class="w-fit flex flex-col justify-center items-center">
@@ -20,11 +20,11 @@ const date = new Date().toLocaleString('en-US', {
                     <span data-text="Full-stack developer & Designer" id="description" class="uppercase text-xl">&nbsp;</span>
                 </h2>
             </div>
-            <div class="w-fit bg-white">
-                <button class="uppercase px-8 py-2 border-2  bg-black">
-                    <span class=" text-white tracking-wider backdrop-invert">Continue</span>
+            <div class="w-fit flex justify-center items-center">
+                <button id="expandable" class="absolute bg-black z-[999] flex justify-center items-center">
+                    <span class="text-white tracking-wider text-center text-nowrap uppercase px-8 py-2">See projects</span>
                 </button>
-            </div> 
+            </div>
         </section>
         <section class="mb-4 w-full">
             <div class="w-full flex justify-between items-start">
@@ -52,13 +52,16 @@ const date = new Date().toLocaleString('en-US', {
 
 <script>
     import { textGlitch } from "@lib/animations/text-effect";
+    import { gsapProvider } from "@lib/animations/gsap";
+
+    const projectButton = document.getElementById('project-button') as HTMLElement
+    const expandable = document.getElementById('expandable') as HTMLElement
+    const name = document.getElementById('name') as HTMLElement
+    const nameText = name.innerText
+    const description = document.getElementById('description') as HTMLElement
+    const descriptionText = description.dataset.text as string
 
     document.addEventListener('DOMContentLoaded', ()=>{
-        const name = document.getElementById('name') as HTMLElement
-        const nameText = name.innerText
-        const description = document.getElementById('description') as HTMLElement
-        const descriptionText = description.dataset.text as string
-
         textGlitch({
             text: descriptionText,
             duration: 20,
@@ -71,11 +74,27 @@ const date = new Date().toLocaleString('en-US', {
 
         textGlitch({
             text: nameText,
-            duration: 20,
+            duration: 25,
             glitch: 2,
             callbackFn: (newText)=>{
                 name.innerText = newText
             }
+        })
+        expandable.addEventListener('click', ()=>{
+            gsapProvider.instance.to(expandable, {
+                z:1000,
+                width: '100vw',
+                height: '100vh',
+                scale: 1.1,
+                ease: 'expo.out',
+                top: 0,
+                left: 0,
+                duration: 1,
+                onComplete: ()=>{
+                    window.location.href = '/projects/personal/'
+                }
+            })
+
         })
     })
 </script>

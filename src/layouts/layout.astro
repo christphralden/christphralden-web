@@ -1,10 +1,13 @@
 ---
 import {Navbar} from '@components/navbar';
+import {cn} from '@lib/utils/'
+
 interface Props {
 	title?: string;
+	className?: string
 }
 
-const { title="Christopher Alden"} = Astro.props;
+const { title="Christopher Alden", className="" } = Astro.props;
 ---
 
 <!doctype html>
@@ -19,9 +22,9 @@ const { title="Christopher Alden"} = Astro.props;
 		<link rel="stylesheet" href="/styles/typography.css">
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class={className}>
 		<Navbar client:load/>
-		<div class="bg-background justify-start min-h-[100dvh] flex flex-col w-screen">
+		<div class={cn("bg-background justify-start min-h-[100dvh] flex flex-col w-screen", className)}>
 			<slot />
 		</div>
 	</body>
@@ -51,6 +54,7 @@ const { title="Christopher Alden"} = Astro.props;
 		background: #0000FF
 	}
 	:root {
+		background-color: #fafafa;
 		min-height: min;
 	}
 	*{
@@ -69,6 +73,9 @@ const { title="Christopher Alden"} = Astro.props;
 	button{
 		all:unset;
 		cursor: pointer;
+	}
+	a{
+		-webkit-user-drag: none;
 	}
 </style>
 
