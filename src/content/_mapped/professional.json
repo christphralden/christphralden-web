@@ -1,6 +1,14 @@
 [
 	{
-		"imageSrc": "/src/assets/easywork.webp",
+		"imageSrc": "/src/assets/cleanui-design-mockup.png",
+		"imageAlt": "cleanui-design",
+		"title": "Cleanui-Design",
+		"category": "Library",
+		"role": "Fullstack dev",
+		"description": ""
+	},
+	{
+		"imageSrc": "/src/assets/easywork-mockup.png",
 		"imageAlt": "Easywork",
 		"title": "Easywork",
 		"category": "NLP, Vector Database",
@@ -8,7 +16,7 @@
 		"description": ""
 	},
 	{
-		"imageSrc": "/src/assets/philantrofi.webp",
+		"imageSrc": "/src/assets/philantrofi-mockup.png",
 		"imageAlt": "Philantrofi",
 		"title": "Philantrofi",
 		"category": "Web-3, Finance",
@@ -16,15 +24,15 @@
 		"description": ""
 	},
 	{
-		"imageSrc": "/src/assets/philantrofi.webp",
+		"imageSrc": "/src/assets/travelohi-mockup.png",
 		"imageAlt": "Travelohi",
 		"title": "Travelohi",
-		"category": "E-Commerce",
+		"category": "E-Commerce, Travel",
 		"role": "Fullstack dev",
 		"description": ""
 	},
 	{
-		"imageSrc": "/src/assets/philantrofi.webp",
+		"imageSrc": "/src/assets/flavor-hive-mockup.png",
 		"imageAlt": "Flavor Hive",
 		"title": "Flavor Hive",
 		"category": "AI, Review Aggregator",
@@ -32,7 +40,6 @@
 		"description": ""
 	},
 	{
-		"imageSrc": "/src/assets/philantrofi.webp",
 		"imageAlt": "Linkasa",
 		"title": "Linkasa",
 		"category": "Desktop, ERP",
@@ -40,7 +47,6 @@
 		"description": ""
 	},
 	{
-		"imageSrc": "/src/assets/philantrofi.webp",
 		"imageAlt": "Talzan",
 		"title": "Talzan",
 		"category": "Game",
@@ -48,7 +54,6 @@
 		"description": ""
 	},
 	{
-		"imageSrc": "/src/assets/philantrofi.webp",
 		"imageAlt": "Adventures of TPA",
 		"title": "Adventures of TPA",
 		"category": "RPG game",
@@ -56,7 +61,6 @@
 		"description": ""
 	},
 	{
-		"imageSrc": "/src/assets/philantrofi.webp",
 		"imageAlt": "Eats the Bag",
 		"title": "Eats the Bag",
 		"category": "Fashion Agency",

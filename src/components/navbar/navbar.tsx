@@ -40,7 +40,7 @@ export const Navbar = () => {
                             <a
                                 key={i}
                                 href={isActive ? "#" : routes.route[0]}
-                                className={`${isActive && 'underline text-[#0000ff]'} uppercase cursor-pointer hover:underline underline-offset-4 flex text-nowrap items-center text-base`}
+                                className={`${isActive && 'underline text-[#0000ff]'} uppercase cursor-pointer hover:underline underline-offset-4 flex text-nowrap items-center text-base px-2 py-2`}
                             >
                                 <p
                                     ref={(el) =>{
