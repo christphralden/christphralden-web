@@ -1,0 +1,66 @@
+[
+	{
+		"imageSrc": "/src/assets/easywork.webp",
+		"imageAlt": "Easywork",
+		"title": "Easywork",
+		"category": "NLP, Vector Database",
+		"role": "Backend dev",
+		"description": ""
+	},
+	{
+		"imageSrc": "/src/assets/philantrofi.webp",
+		"imageAlt": "Philantrofi",
+		"title": "Philantrofi",
+		"category": "Web-3, Finance",
+		"role": "Fullstack dev",
+		"description": ""
+	},
+	{
+		"imageSrc": "/src/assets/philantrofi.webp",
+		"imageAlt": "Travelohi",
+		"title": "Travelohi",
+		"category": "E-Commerce",
+		"role": "Fullstack dev",
+		"description": ""
+	},
+	{
+		"imageSrc": "/src/assets/philantrofi.webp",
+		"imageAlt": "Flavor Hive",
+		"title": "Flavor Hive",
+		"category": "AI, Review Aggregator",
+		"role": "Fullstack dev",
+		"description": ""
+	},
+	{
+		"imageSrc": "/src/assets/philantrofi.webp",
+		"imageAlt": "Linkasa",
+		"title": "Linkasa",
+		"category": "Desktop, ERP",
+		"role": "Fullstack dev",
+		"description": ""
+	},
+	{
+		"imageSrc": "/src/assets/philantrofi.webp",
+		"imageAlt": "Talzan",
+		"title": "Talzan",
+		"category": "Game",
+		"role": "Game dev",
+		"description": ""
+	},
+	{
+		"imageSrc": "/src/assets/philantrofi.webp",
+		"imageAlt": "Adventures of TPA",
+		"title": "Adventures of TPA",
+		"category": "RPG game",
+		"role": "Game dev",
+		"description": ""
+	},
+	{
+		"imageSrc": "/src/assets/philantrofi.webp",
+		"imageAlt": "Eats the Bag",
+		"title": "Eats the Bag",
+		"category": "Fashion Agency",
+		"role": "Fullstack dev",
+		"description": ""
+	}
+]

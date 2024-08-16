@@ -58,7 +58,6 @@ const date = new Date().toLocaleString('en-US', {
     import { textGlitch } from "@lib/animations/text-effect";
     import { gsapProvider } from "@lib/animations/gsap";
 
-    const projectButton = document.getElementById('project-button') as HTMLElement
     const expandable = document.getElementById('expandable') as HTMLElement
     const name = document.getElementById('name') as HTMLElement
     const nameText = name.innerText
@@ -92,9 +91,9 @@ const date = new Date().toLocaleString('en-US', {
                 ease: 'expo.out',
                 top: 0,
                 left: 0,
-                duration: 0.5,
+                duration: 1,
                 onComplete: ()=>{
-                    window.location.href = '/projects/personal/'
+                    window.location.href = '/projects/professional/'
                 }
             })
 

@@ -5,7 +5,7 @@ export const NavbarRoutes = [
     },
     {
         name:"projects",
-        route:["/projects/personal/"]
+        route:["/projects/professional/"]
     },
     {
         name:"experience",

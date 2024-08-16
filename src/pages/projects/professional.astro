@@ -1,16 +1,50 @@
 ---
-import Layout from '@layouts/layout.astro'
-
-type Props = {
-
-}
-
-const {} = Astro.props
-
+import Layout from '@layouts/layout.astro';
+import Card from '@components/card/card.astro';
+import Professional from '@content/_mapped/professional.json';
 ---
+
 <Layout>
+	<div class="w-full min-h-screen pt-36 flex flex-col px-4 md:px-8 xl:px-16 py-8 gap-8">
+		<section>
+			<h1 class="text-5xl uppercase">
+				<span
+					data-text="Professional"
+					id="description"
+					>&nbsp;</span
+				>
+			</h1>
+		</section>
+		<section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full gap-4 gap-y-16 z-0">
+			{
+				Professional.map((project) => (
+					<Card
+						imageSrc={project.imageSrc}
+						imageAlt={project.imageAlt}
+						title={project.title}
+						category={project.category}
+						role={project.role}
+					/>
+				))
+			}
+		</section>
+	</div>
 </Layout>
 
-<style>
+<script>
+	import {textGlitch} from '@lib/animations/text-effect';
 
-</style>
+	document.addEventListener('DOMContentLoaded', () => {
+		const description = document.getElementById('description') as HTMLElement;
+		const descriptionText = description.dataset.text as string;
+
+		textGlitch({
+			text: descriptionText,
+			duration: 50,
+			glitch: 2,
+			callbackFn: (newText) => {
+				description.innerText = newText;
+			},
+		});
+	});
+</script>
