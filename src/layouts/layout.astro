@@ -24,7 +24,7 @@ const { title="Christopher Alden", className="" } = Astro.props;
 	</head>
 	<body class={className}>
 		<Navbar client:load/>
-		<div class={cn("bg-background justify-start min-h-[100dvh] flex flex-col w-screen", className)}>
+		<div class={cn("bg-background justify-start min-h-[100dvh] flex flex-col w-screen text-sm md:text-xl", className)}>
 			<slot />
 		</div>
 	</body>

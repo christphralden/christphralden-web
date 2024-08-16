@@ -5,14 +5,10 @@ export const NavbarRoutes = [
     },
     {
         name:"projects",
-        route:["/projects/personal/"]
+        route:["/projects/professional/"]
     },
     {
         name:"experience",
         route:["/experience/"]
-    },
-    {
-        name:"clean-ui",
-        route:["https://cleanui-design.vercel.app"]
     },
 ]

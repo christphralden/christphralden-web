@@ -1,0 +1,70 @@
+[
+	{
+		"imageSrc": "/src/assets/cleanui-design-mockup.png",
+		"imageAlt": "cleanui-design",
+		"title": "Cleanui-Design",
+		"category": "Library",
+		"role": "Fullstack dev",
+		"description": ""
+	},
+	{
+		"imageSrc": "/src/assets/easywork-mockup.png",
+		"imageAlt": "Easywork",
+		"title": "Easywork",
+		"category": "NLP, Vector Database",
+		"role": "Backend dev",
+		"description": ""
+	},
+	{
+		"imageSrc": "/src/assets/philantrofi-mockup.png",
+		"imageAlt": "Philantrofi",
+		"title": "Philantrofi",
+		"category": "Web-3, Finance",
+		"role": "Fullstack dev",
+		"description": ""
+	},
+	{
+		"imageSrc": "/src/assets/travelohi-mockup.png",
+		"imageAlt": "Travelohi",
+		"title": "Travelohi",
+		"category": "E-Commerce, Travel",
+		"role": "Fullstack dev",
+		"description": ""
+	},
+	{
+		"imageSrc": "/src/assets/flavor-hive-mockup.png",
+		"imageAlt": "Flavor Hive",
+		"title": "Flavor Hive",
+		"category": "AI, Review Aggregator",
+		"role": "Fullstack dev",
+		"description": ""
+	},
+	{
+		"imageAlt": "Linkasa",
+		"title": "Linkasa",
+		"category": "Desktop, ERP",
+		"role": "Fullstack dev",
+		"description": ""
+	},
+	{
+		"imageAlt": "Talzan",
+		"title": "Talzan",
+		"category": "Game",
+		"role": "Game dev",
+		"description": ""
+	},
+	{
+		"imageAlt": "Adventures of TPA",
+		"title": "Adventures of TPA",
+		"category": "RPG game",
+		"role": "Game dev",
+		"description": ""
+	},
+	{
+		"imageAlt": "Eats the Bag",
+		"title": "Eats the Bag",
+		"category": "Fashion Agency",
+		"role": "Fullstack dev",
+		"description": ""
+	}
+]
