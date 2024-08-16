@@ -11,4 +11,8 @@ export const NavbarRoutes = [
         name:"experience",
         route:["/experience/"]
     },
+    {
+        name:"clean-ui",
+        route:["https://cleanui-design.vercel.app"]
+    },
 ]
