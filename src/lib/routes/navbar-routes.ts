@@ -1,11 +1,11 @@
 export const NavbarRoutes = [
     {
         name:"Home",
-        route:["/home/"]
+        route:["/"]
     },
     {
         name:"projects",
-        route:["/project/"]
+        route:["/projects/personal/"]
     },
     {
         name:"experience",

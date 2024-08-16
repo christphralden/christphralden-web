@@ -19,28 +19,28 @@ export async function textGlitch({
     if(!hidden){
         memoizedText = [...initial];
     }
-    const firstPassDuration = duration / 2;
+    const initialPassDuration = duration / 2;
 
     let y = 1;
-        const initialIntervalId = setInterval(() => {
-            if(!hidden){
-                if (y >= size) {
-                    clearInterval(initialIntervalId);
-                    return
-                }
-                const randomCharacter = alphabets[Math.floor(Math.random() * alphabets.length)];
-                memoizedText[y] = hidden ? ' ' : randomCharacter;
-                callbackFn(memoizedText.join(''));
+    const initialPass = setInterval(() => {
+        if(!hidden){
+            if (y >= size) {
+                clearInterval(initialPass);
+                return
             }
-            y++;
-        }, firstPassDuration);
+            const randomCharacter = alphabets[Math.floor(Math.random() * alphabets.length)];
+            memoizedText[y] = randomCharacter;
+            callbackFn(memoizedText.join(''));
+        }
+        y++;
+    }, initialPassDuration);
     
     let i = hidden ? 0 : 1;
     let j = 0;
 
-    const intervalId = setInterval(() => {
+    const secondPass = setInterval(() => {
         if (i >= size) {
-            clearInterval(intervalId);
+            clearInterval(secondPass);
             return;
         }
 

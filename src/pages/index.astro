@@ -21,9 +21,11 @@ const date = new Date().toLocaleString('en-US', {
                 </h2>
             </div>
             <div class="w-fit bg-white">
-                <button class="uppercase px-8 py-2 border-2  bg-black">
-                    <span class=" text-white tracking-wider backdrop-invert">Continue</span>
-                </button>
+                <a href="/projects/personal/">
+                    <button class="uppercase px-8 py-2 border-2 bg-black group">
+                        <span class="text-white tracking-wider">See projects</span>
+                    </button>
+                </a>
             </div> 
         </section>
         <section class="mb-4 w-full">
@@ -71,7 +73,7 @@ const date = new Date().toLocaleString('en-US', {
 
         textGlitch({
             text: nameText,
-            duration: 20,
+            duration: 25,
             glitch: 2,
             callbackFn: (newText)=>{
                 name.innerText = newText

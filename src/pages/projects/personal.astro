@@ -1,0 +1,70 @@
+---
+import Layout from '@layouts/layout.astro'
+import Image from 'astro/components/Image.astro'
+import easywork from '@public/easywork.webp'
+import philantrofi from '@public/philantrofi.webp'
+
+type Props = {
+
+}
+
+const {} = Astro.props
+
+---
+<Layout>
+    <div class="w-full min-h-screen pt-36 flex flex-col px-16 py-8 gap-8">
+        <section>
+            <h1 class="text-5xl uppercase">
+                <span data-text="Personal" id="description">&nbsp;</span>
+            </h1>
+        </section>
+        <section class="grid grid-cols-3 w-full gap-4 gap-y-16">
+            <div class="w-full h-full aspect-square flex flex-col gap-8 group overflow-hidden">
+                <div class="w-full h-full overflow-hidden">
+                    <Image src={easywork} alt="easywork" class="object-cover group-hover:translate-x-4 scale-[1.1] transition-all duration-500 ease-out w-full h-full flex-shrink" />
+                </div>
+                <div>
+                    <p class="text-gray-400 uppercase">
+                        <span class="text-black group-hover:text-[#0000ff]">[&nbsp;Easywork&nbsp;]</span>
+                    </p>
+                    <p class="text-gray-400 uppercase">
+                        <span class="">NLP, Vector Database</span>
+                    </p>
+                </div>
+            </div>
+            <div class="w-full h-full aspect-square flex flex-col gap-8 group overflow-hidden">
+                <div class="w-full h-full overflow-hidden">
+                    <Image src={philantrofi} alt="easywork" class="object-cover group-hover:translate-x-4 scale-[1.1] transition-all duration-500 ease-out w-full h-full flex-shrink" />
+                </div>
+                <div>
+                    <p class="text-gray-400 uppercase">
+                        <span class="text-black group-hover:text-[#0000ff]">[&nbsp;Philantrofi&nbsp;]</span>
+                    </p>
+                    <p class="text-gray-400 uppercase">
+                        <span class="">Web-3, Finance</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+</Layout>
+
+<script>
+    import { textGlitch } from "@lib/animations/text-effect";
+
+    document.addEventListener('DOMContentLoaded', ()=>{
+        const description = document.getElementById('description') as HTMLElement
+        const descriptionText = description.dataset.text as string
+
+        textGlitch({
+            text: descriptionText,
+            duration: 20,
+            glitch: 3,
+            hidden: true,
+            callbackFn: (newText)=>{
+                description.innerText = newText
+            }
+        })
+
+    })
+</script>

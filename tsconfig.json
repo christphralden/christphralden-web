@@ -12,6 +12,10 @@
       "@lib/*": [
         "lib/*"
       ],
+      "@public/*": [
+        "../public/*"
+      ],
+
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react",
