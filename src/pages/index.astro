@@ -11,7 +11,7 @@ const date = new Date().toLocaleString('en-US', {
 
 ---
 
-<Layout>
+<Layout className="overflow-hidden">
     <div class="w-full h-screen flex flex-col px-16 py-8">
         <section class="w-full h-full flex flex-col flex-shrink justify-center items-center gap-16">
             <div class="w-fit flex flex-col justify-center items-center">
@@ -21,7 +21,7 @@ const date = new Date().toLocaleString('en-US', {
                 </h2>
             </div>
             <div class="w-fit flex justify-center items-center">
-                <button id="expandable" class="fixed bg-black z-0 flex justify-center items-center">
+                <button id="expandable" class="absolute bg-black z-[999] flex justify-center items-center">
                     <span class="text-white tracking-wider text-center text-nowrap uppercase px-8 py-2">See projects</span>
                 </button>
             </div>
@@ -85,15 +85,15 @@ const date = new Date().toLocaleString('en-US', {
                 z:1000,
                 width: '100vw',
                 height: '100vh',
+                scale: 1.1,
                 ease: 'expo.out',
                 top: 0,
                 left: 0,
-                duration: 1.5,
+                duration: 1,
                 onComplete: ()=>{
-                    expandable.style.zIndex = '100'
                     window.location.href = '/projects/personal/'
                 }
-        })
+            })
 
         })
     })

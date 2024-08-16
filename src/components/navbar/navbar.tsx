@@ -28,10 +28,10 @@ export const Navbar = () => {
     }, [])
     
     return (
-        <nav className="fixed w-full h-20 flex justify-center px-16 bg-background">
-            <div className="w-full h-full flex gap-16 items-center justify-between z-10">
-                <div className='aspect-square bg-black'>
-                    <AtSign/>
+        <nav className="fixed w-full h-20 flex justify-center px-16 bg-background z-[100]">
+            <div className="w-full h-full flex gap-16 items-center justify-between">
+                <div className='aspect-square bg-[#0000ff]'>
+                    <AtSign color='transparent'/>
                 </div>
                 <div className="w-full flex justify-start gap-8 xl:gap-16">
                     {NavbarRoutes.map((routes, i) => {
