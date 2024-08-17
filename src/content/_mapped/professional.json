@@ -27,15 +27,6 @@
 		"route":"/works/philantrofi/"
 	},
 	{
-		"imageSrc": "/src/assets/travelohi-mockup.png",
-		"imageAlt": "Travelohi",
-		"title": "Travelohi",
-		"category": "E-Commerce, Travel",
-		"role": "Fullstack dev",
-		"description": "",
-		"route":"/works/travelohi/"
-	},
-	{
 		"imageSrc": "/src/assets/flavor-hive-mockup.png",
 		"imageAlt": "Flavor Hive",
 		"title": "Flavor Hive",
@@ -45,6 +36,16 @@
 		"route":"/works/flavorhive/"
 	},
 	{
+		"imageSrc": "/src/assets/travelohi-mockup.png",
+		"imageAlt": "Travelohi",
+		"title": "Travelohi",
+		"category": "E-Commerce, Travel",
+		"role": "Fullstack dev",
+		"description": "",
+		"route":"/works/travelohi/"
+	},
+	{
+		"imageSrc": "/src/assets/linkasa-mockup.png",
 		"imageAlt": "Linkasa",
 		"title": "Linkasa",
 		"category": "Desktop, ERP",
@@ -53,6 +54,7 @@
 		"route":"/works/linkasa/"
 	},
 	{
+		"imageSrc": "/src/assets/rmcs-mockup.png",
 		"imageAlt": "Sentiment Analysis Research Paper",
 		"title": "Sentiment Analysis Research Paper",
 		"category": "AI, NLP, Sentiment Analysis",
