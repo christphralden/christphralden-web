@@ -51,6 +51,7 @@ export const Navbar = () => {
                                     onMouseEnter={() =>
                                         handleMouseEnter(routes.name, i)
                                     }
+                                    className='no-select'
                                 >
                                     {routes.name}
                                 </p>

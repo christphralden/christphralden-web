@@ -24,7 +24,7 @@ const { title="Christopher Alden", className="" } = Astro.props;
 	</head>
 	<body class={className}>
 		<Navbar client:load/>
-		<div class={cn("bg-background justify-start min-h-[100dvh] flex flex-col w-screen text-sm md:text-xl", className)}>
+		<div class={cn("bg-background justify-start min-h-[100dvh] flex flex-col w-screen text-sm md:text-base", className)}>
 			<slot />
 		</div>
 	</body>
@@ -73,9 +73,13 @@ const { title="Christopher Alden", className="" } = Astro.props;
 	button{
 		all:unset;
 		cursor: pointer;
+		user-select: none;
 	}
 	a{
 		-webkit-user-drag: none;
+	}
+	.no-select{
+		user-select: none;
 	}
 </style>
 

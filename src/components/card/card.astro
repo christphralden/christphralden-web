@@ -9,37 +9,40 @@ interface Props {
 	category: string;
 	role: string;
 	description?: string;
+	route?: string
 }
 
-const {imageSrc, imageAlt, title, category, role, description=""} = Astro.props;
+const {imageSrc, imageAlt, title, category, role, description="", route=""} = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif,webp}')
 ---
 
-<div class="w-full h-[600px] flex flex-col gap-4 group overflow-hidden">
-	<div class="w-full h-full overflow-hidden">
-		{imageSrc != null ?
-			<Image
-				src={images[imageSrc]()}
-				alt={imageAlt}
-				class="object-cover group-hover:translate-x-4 scale-[1.1] transition-all duration-500 ease-out w-full h-full flex-shrink"
-			/>
-			:
-			<div class="bg-gray-200 w-full h-full flex justify-center items-center">
-				<p class="uppercase group-hover:text-[#0000ff] text-gray-400">[404] No documentation yet</p>
+<a href={route} class="no-select">
+	<div class="w-full h-[600px] flex flex-col gap-4 group overflow-hidden">
+		<div class="w-full h-full overflow-hidden relative">
+			{imageSrc != null ?
+				<Image
+					src={images[imageSrc]()}
+					alt={imageAlt}
+					class="object-cover group-hover:translate-x-4 scale-[1.1] transition-all duration-500 ease-out w-full h-full flex-shrink no-select"
+				/>
+				:
+				<div class="bg-gray-200 w-full h-full flex justify-center items-center">
+					<p class="uppercase group-hover:text-[#0000ff] text-gray-400">[404] No documentation yet</p>
+				</div>
+			}
+		</div>
+		<div class="w-full">
+			<p class="text-gray-400 uppercase">
+				<span class="text-black group-hover:text-[#0000ff]">[&nbsp;{title}&nbsp;]</span>
+			</p>
+			<div class="w-full flex justify-start text-nowrap text-sm">
+				<p class="text-gray-400 uppercase w-1/2 font-extralight">
+					{category}
+				</p>
+				<p class="text-gray-400 uppercase w-1/2">
+					{role}
+				</p>
 			</div>
-		}
-	</div>
-	<div class="w-full">
-		<p class="text-gray-400 uppercase">
-			<span class="text-black group-hover:text-[#0000ff]">[&nbsp;{title}&nbsp;]</span>
-		</p>
-		<div class="w-full flex justify-start text-nowrap text-sm">
-			<p class="text-gray-400 uppercase w-1/2 font-extralight">
-				{category}
-			</p>
-			<p class="text-gray-400 uppercase w-1/2">
-				{role}
-			</p>
 		</div>
 	</div>
-</div>
+</a>

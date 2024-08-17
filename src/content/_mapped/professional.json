@@ -3,9 +3,10 @@
 		"imageSrc": "/src/assets/cleanui-design-mockup.png",
 		"imageAlt": "cleanui-design",
 		"title": "Cleanui-Design",
-		"category": "Library",
+		"category": "Component Library",
 		"role": "Fullstack dev",
-		"description": ""
+		"description": "",
+		"route":"/works/cleanui-design/"
 	},
 	{
 		"imageSrc": "/src/assets/easywork-mockup.png",
@@ -13,7 +14,8 @@
 		"title": "Easywork",
 		"category": "NLP, Vector Database",
 		"role": "Backend dev",
-		"description": ""
+		"description": "",
+		"route":"/works/easywork/"
 	},
 	{
 		"imageSrc": "/src/assets/philantrofi-mockup.png",
@@ -21,7 +23,8 @@
 		"title": "Philantrofi",
 		"category": "Web-3, Finance",
 		"role": "Fullstack dev",
-		"description": ""
+		"description": "",
+		"route":"/works/philantrofi/"
 	},
 	{
 		"imageSrc": "/src/assets/travelohi-mockup.png",
@@ -29,7 +32,8 @@
 		"title": "Travelohi",
 		"category": "E-Commerce, Travel",
 		"role": "Fullstack dev",
-		"description": ""
+		"description": "",
+		"route":"/works/travelohi/"
 	},
 	{
 		"imageSrc": "/src/assets/flavor-hive-mockup.png",
@@ -37,34 +41,55 @@
 		"title": "Flavor Hive",
 		"category": "AI, Review Aggregator",
 		"role": "Fullstack dev",
-		"description": ""
+		"description": "",
+		"route":"/works/flavorhive/"
 	},
 	{
 		"imageAlt": "Linkasa",
 		"title": "Linkasa",
 		"category": "Desktop, ERP",
 		"role": "Fullstack dev",
-		"description": ""
+		"description": "",
+		"route":"/works/linkasa/"
+	},
+	{
+		"imageAlt": "Sentiment Analysis Research Paper",
+		"title": "Sentiment Analysis Research Paper",
+		"category": "AI, NLP, Sentiment Analysis",
+		"role": "Research",
+		"description": "",
+		"route":"/works/sentiment-analysis/"
+	},
+	{
+		"imageAlt": "PeerLink",
+		"title": "PeerLink",
+		"category": "Social",
+		"role": "Mobile dev",
+		"description": "",
+		"route":"/works/peerlink/"
 	},
 	{
 		"imageAlt": "Talzan",
 		"title": "Talzan",
 		"category": "Game",
 		"role": "Game dev",
-		"description": ""
+		"description": "",
+		"route":"/works/talzan/"
 	},
 	{
 		"imageAlt": "Adventures of TPA",
 		"title": "Adventures of TPA",
 		"category": "RPG game",
 		"role": "Game dev",
-		"description": ""
+		"description": "",
+		"route":"/works/adventures-of-tpa/"
 	},
 	{
 		"imageAlt": "Eats the Bag",
 		"title": "Eats the Bag",
 		"category": "Fashion Agency",
 		"role": "Fullstack dev",
-		"description": ""
+		"description": "",
+		"route":"/works/eats-the-bag/"
 	}
 ]
