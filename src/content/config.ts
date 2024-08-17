@@ -32,11 +32,6 @@ export const collectionNames = Object.keys(glob)
     .map((filepath) => path.basename(path.dirname(filepath)))
     .filter((name) => name !== '.' && name !== '..');
 
-const schema = {
-    schema: z.object({
-        title: z.string()
-    })
-};
 
 function assignCollection(acc: any, name: any) {
     return Object.assign(acc, { [name]: defineCollection({ ...portfolioCollection }) });
