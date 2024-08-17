@@ -1,0 +1,108 @@
+{
+	"professional": {
+		"baseUrl": "/works/professional/",
+		"data":[
+			{
+				"imageSrc": "/src/assets/cleanui-design-mockup.png",
+				"imageAlt": "cleanui-design",
+				"title": "Cleanui-Design",
+				"category": "Component Library",
+				"role": "Fullstack dev",
+				"description": "",
+				"route":"cleanui-design"
+			},
+			{
+				"imageSrc": "/src/assets/easywork-mockup.png",
+				"imageAlt": "Easywork",
+				"title": "Easywork",
+				"category": "LLM, Vector Database",
+				"role": "Backend dev",
+				"description": "",
+				"route":"easywork"
+			},
+			{
+				"imageSrc": "/src/assets/philantrofi-mockup.png",
+				"imageAlt": "Philantrofi",
+				"title": "Philantrofi",
+				"category": "Web-3, Finance",
+				"role": "Fullstack dev",
+				"description": "",
+				"route":"philantrofi"
+			},
+			{
+				"imageSrc": "/src/assets/flavor-hive-mockup.png",
+				"imageAlt": "Flavor Hive",
+				"title": "Flavor Hive",
+				"category": "NLP, Review Aggregator",
+				"role": "Fullstack dev",
+				"description": "",
+				"route":"flavorhive"
+			},
+			{
+				"imageSrc": "/src/assets/travelohi-mockup.png",
+				"imageAlt": "Travelohi",
+				"title": "Travelohi",
+				"category": "E-Commerce, Travel",
+				"role": "Fullstack dev",
+				"description": "",
+				"route":"travelohi"
+			},
+			{
+				"imageSrc": "/src/assets/linkasa-mockup.png",
+				"imageAlt": "Linkasa",
+				"title": "Linkasa",
+				"category": "Desktop, ERP",
+				"role": "Fullstack dev",
+				"description": "",
+				"route":"linkasa"
+			},
+			{
+				"imageSrc": "/src/assets/rmcs-mockup.png",
+				"imageAlt": "Sentiment Analysis Research Paper",
+				"title": "Sentiment Analysis Research Paper",
+				"category": "NLP, Sentiment Analysis",
+				"role": "Research",
+				"description": "",
+				"route":"sentiment-analysis-comparison"
+			},
+			{
+				"imageAlt": "PeerLink",
+				"title": "PeerLink",
+				"category": "Social",
+				"role": "Mobile dev",
+				"description": "",
+				"route":"peerlink"
+			},
+			{
+				"imageAlt": "Talzan",
+				"title": "Talzan",
+				"category": "Game",
+				"role": "Game dev",
+				"description": "",
+				"route":"talzan"
+			},
+			{
+				"imageAlt": "Adventures of TPA",
+				"title": "Adventures of TPA",
+				"category": "RPG game",
+				"role": "Game dev",
+				"description": "",
+				"route":"adventures-of-tpa"
+			},
+			{
+				"imageAlt": "Eats the Bag",
+				"title": "Eats the Bag",
+				"category": "Fashion Agency",
+				"role": "Fullstack dev",
+				"description": "",
+				"route":"eats-the-bag"
+			}
+		]
+	},
+	"personal": [
+
+	],
+	"design": [
+
+	]
+}

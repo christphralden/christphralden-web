@@ -1,7 +1,7 @@
 ---
 import Layout from '@layouts/layout.astro';
 import Card from '@components/card/card.astro';
-import professional from '@content/_mapped/professional.json';
+import works from '@lib/routes/_works.json';
 ---
 
 <Layout>
@@ -23,7 +23,7 @@ import professional from '@content/_mapped/professional.json';
 		</section>
 		<section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full gap-4 gap-y-16 z-0">
 			{
-				professional.map((works) => (
+				works.professional.data.map((works) => (
 					<Card
 						imageSrc={works.imageSrc}
 						imageAlt={works.imageAlt}

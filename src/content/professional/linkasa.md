@@ -1,0 +1,25 @@
+---
+type: "Professional"
+title: "Linkasa"
+year: "2023"
+category: "Desktop, ERP"
+role: "Fullstack dev"
+name: "Linkasa"
+description: "Linkasa is a desktop-based ERP solution designed to streamline business operations and enhance productivity."
+githublink: "https://github.com/yourusername/linkasa"
+mockup: "/src/assets/linkasa-mockup.png"
+problem: "Many businesses struggle with fragmented systems that lead to inefficiencies in their operations."
+solution: "Linkasa provides an integrated ERP system that connects various business functions, improving efficiency and productivity."
+features_scope:
+  - "Integrated ERP Modules"
+  - "User-Friendly Interface"
+  - "Customizable Dashboards"
+  - "Data Analytics"
+  - "Automated Reporting"
+development_process: "The development of Linkasa involved creating a robust desktop application with a focus on seamless integration of ERP modules. The application was developed using Electron and integrated with various business APIs."
+gallery:
+  - "/images/screenshot1.png"
+  - "/images/screenshot2.png"
+  - "/images/screenshot3.png"
+route: "linkasa"
+---

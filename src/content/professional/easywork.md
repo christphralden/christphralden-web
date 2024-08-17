@@ -1,0 +1,25 @@
+---
+type: "Professional"
+title: "Easywork"
+year: "2023"
+category: "LLM, Vector Database"
+role: "Backend dev"
+name: "Easywork"
+description: "Easywork is an AI-powered application designed to connect users with suitable job opportunities and recommend skill-enhancing courses."
+githublink: "https://github.com/yourusername/easywork"
+mockup: "/src/assets/easywork-mockup.png"
+problem: "Finding suitable job opportunities and skill enhancement resources is often time-consuming and inefficient."
+solution: "Developed Easywork, an AI-powered platform that matches users with job opportunities and recommends relevant courses based on their profiles."
+features_scope:
+  - "AI-Powered Job Matching"
+  - "Course Recommendations"
+  - "User Authentication"
+  - "Profile Management"
+  - "Responsive Design"
+development_process: "The development of Easywork involved using LLM and a Vector Database to create an intelligent system for job matching and course recommendations. The backend was developed using Golang, with PostgreSQL as the database."
+gallery:
+  - "/images/screenshot1.png"
+  - "/images/screenshot2.png"
+  - "/images/screenshot3.png"
+route: "easywork"
+---

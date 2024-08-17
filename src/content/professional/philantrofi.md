@@ -1,0 +1,25 @@
+---
+type: "Professional"
+title: "Philantrofi"
+year: "2023"
+category: "Web-3, Finance"
+role: "Fullstack dev"
+name: "Philantrofi"
+description: "Philantrofi is a Web-3 application aimed at enhancing transparency in the charity sector by recording all transactions on-chain."
+githublink: "https://github.com/yourusername/philantrofi"
+mockup: "/src/assets/philantrofi-mockup.png"
+problem: "Transparency in charity donations is often questioned, leading to mistrust among donors."
+solution: "Philantrofi provides a transparent solution by recording all transactions on-chain, allowing donors to track their contributions in real-time."
+features_scope:
+  - "On-Chain Transactions"
+  - "Transparency in Donations"
+  - "Secure Contributions"
+  - "Real-Time Tracking"
+  - "Decentralized Platform"
+development_process: "Philantrofi was developed using Web-3 technologies, with a focus on creating a transparent and secure platform for charity donations. The development involved smart contract creation, blockchain integration, and user interface design."
+gallery:
+  - "/images/screenshot1.png"
+  - "/images/screenshot2.png"
+  - "/images/screenshot3.png"
+route: "philantrofi"
+---

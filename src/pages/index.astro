@@ -15,7 +15,7 @@ const date = new Date().toLocaleString('en-US', {
     <div class="w-full h-[100dvh] flex flex-col p-4 md:px-8 xl:px-16 gap-8">
         <section class="w-full h-full flex flex-col flex-shrink justify-center items-center gap-16">
             <div class="w-fit flex flex-col justify-center items-center">
-                <div class="w-fit flex flex-col justify-center items-center gap-2">
+                <div class="w-fit flex flex-col justify-center items-center">
                     <h1 class="text-center text-7xl md:text-8xl xl:text-9xl tracking-tighter uppercase font-medium min-h-20 flex justify-center items-center">
                         <span id="name">Christopher Alden</span>
                     </h1>
@@ -26,7 +26,7 @@ const date = new Date().toLocaleString('en-US', {
             </div>
             <div class="w-fit flex justify-center items-center">
                 <button id="expandable" class="absolute bg-black z-[999] flex justify-center items-center">
-                    <span class="text-sm md:text-base text-white tracking-wider text-center text-nowrap uppercase px-8 py-2">view works</span>
+                    <span class="text-sm md:text-base text-white tracking-wider text-center text-nowrap uppercase px-8 py-2 rasterize">view works</span>
                 </button>
             </div>
         </section>
@@ -88,15 +88,17 @@ const date = new Date().toLocaleString('en-US', {
                 z:1000,
                 width: '100vw',
                 height: '100vh',
-                ease: 'expo.out',
+                ease: 'expo.inOut',
                 top: 0,
                 left: 0,
-                duration: 1,
+                scale: 1.1,
+                duration: 1.5,
                 onComplete: ()=>{
                     window.location.href = '/works/professional/'
+                    expandable.style.width = 'fit'
+                    expandable.style.height = 'fit'
                 }
             })
-
         })
     })
 </script>
