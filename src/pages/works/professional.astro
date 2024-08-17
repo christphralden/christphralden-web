@@ -1,7 +1,7 @@
 ---
 import Layout from '@layouts/layout.astro';
 import Card from '@components/card/card.astro';
-import professoinal from '@content/_mapped/professional.json';
+import professional from '@content/_mapped/professional.json';
 ---
 
 <Layout>
@@ -23,14 +23,14 @@ import professoinal from '@content/_mapped/professional.json';
 		</section>
 		<section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full gap-4 gap-y-16 z-0">
 			{
-				professoinal.map((project) => (
+				professional.map((works) => (
 					<Card
-						imageSrc={project.imageSrc}
-						imageAlt={project.imageAlt}
-						title={project.title}
-						category={project.category}
-						role={project.role}
-						route={project.route}
+						imageSrc={works.imageSrc}
+						imageAlt={works.imageAlt}
+						title={works.title}
+						category={works.category}
+						role={works.role}
+						route={works.route}
 					/>
 				))
 			}

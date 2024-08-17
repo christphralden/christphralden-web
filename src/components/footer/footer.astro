@@ -1,0 +1,24 @@
+---
+import Separator from '../ui/separator.astro'
+import {Github, Instagram, Linkedin} from '@geist-ui/icons'
+
+type Props = {
+
+}
+
+const {} = Astro.props
+
+---
+<footer class="w-full h-[300px] flex flex-col justify-center items-center p-8 gap-4">
+    <section class="w-full h-full flex justify-center gap-4 items-center text-center text-xl">
+        Defined by consistency, refined by simplicity.
+    </section> 
+    <section class="w-full flex justify-center items-center gap-8 cursor-pointer">
+        <a href="https://github.com/christphralden/"><Github/></a>
+        <a href="https://instagram.com/christphralden/"><Instagram/></a>
+        <a href="https://www.linkedin.com/in/christphralden/"><Linkedin/></a>
+    </section>
+    <section class="font-sans">
+        Brought to you by <span class="underline underline-offset-4 cursor-pointer"><a href="https://cleanui-design.vercel.app">CLEAN-UI</a></span>
+    </section>
+</footer>

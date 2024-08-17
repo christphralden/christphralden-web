@@ -1,13 +1,15 @@
 ---
+import Footer from '@components/footer/footer.astro';
 import {Navbar} from '@components/navbar';
 import {cn} from '@lib/utils/'
 
 interface Props {
 	title?: string;
 	className?: string
+	footer?: boolean
 }
 
-const { title="Christopher Alden", className="" } = Astro.props;
+const { title="Christopher Alden", className="", footer=true } = Astro.props;
 ---
 
 <!doctype html>
@@ -27,6 +29,7 @@ const { title="Christopher Alden", className="" } = Astro.props;
 		<div class={cn("bg-background justify-start min-h-[100dvh] flex flex-col w-screen text-sm md:text-base", className)}>
 			<slot />
 		</div>
+		{footer && <Footer/>}
 	</body>
 
 </html>
