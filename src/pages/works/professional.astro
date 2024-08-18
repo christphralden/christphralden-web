@@ -44,9 +44,9 @@ import works from '@lib/routes/_works.json';
 <script>
 	import {textGlitch} from '@lib/animations/text-effect';
 
-	document.addEventListener('DOMContentLoaded', () => {
-		const description = document.getElementById('description') as HTMLElement;
-		const descriptionText = description.dataset.text as string;
+	document.addEventListener('astro:page-load', () => {
+		const description = document.getElementById('description') as HTMLElement
+		const descriptionText = description.dataset.text as string
 
 		textGlitch({
 			text: descriptionText,

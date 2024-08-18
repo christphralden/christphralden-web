@@ -28,7 +28,7 @@ const { title="Christopher Alden", className="", footer=true, optViewTransitions
 		<title>{title}</title>
 	</head>
 	<body class={className}>
-		<Navbar client:load/>
+		<Navbar client:only="react" transition:persist/>
 		<div class={cn("bg-background justify-start min-h-[100dvh] flex flex-col w-screen text-sm md:text-base", className)}>
 			<slot />
 		</div>

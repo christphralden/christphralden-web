@@ -53,7 +53,7 @@ const date = new Date().toLocaleString('en-US', {
     const description = document.getElementById('description') as HTMLElement
     const descriptionText = description.dataset.text as string
 
-    document.addEventListener('DOMContentLoaded', ()=>{
+    document.addEventListener('astro:page-load', ()=>{
         textGlitch({
             text: descriptionText,
             duration: 20,

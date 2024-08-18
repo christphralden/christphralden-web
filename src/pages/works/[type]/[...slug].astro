@@ -44,7 +44,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg
 	<div class="w-full min-h-screen h-full pt-36 flex flex-col px-4 md:px-8 xl:px-16 py-8 gap-32">
         <section class="w-full h-full flex flex-col lg:flex-row gap-8">
             <div class="w-full h-full lg:h-[80dvh] overflow-clip">
-                <Image transition:name=`${parsedPage.title}` src={images[parsedPage.mockup]()} alt={parsedPage.title} class="w-full scale-[1.1] md:scale-100 h-full min-h-[600px] object-cover rasterize"/> 
+                <Image transition:persist transition:name=`${parsedPage.title}` src={images[parsedPage.mockup]()} alt={parsedPage.title} class="w-full scale-[1.1] md:scale-100 h-full min-h-[600px] object-cover rasterize"/> 
             </div>
             <aside class="w-full lg:w-[700px] flex flex-col gap-8">
                 <h1 class="text-start text-7xl md:text-8xl xl:text-9xl tracking-tighter uppercase font-medium flex justify-start items-center flex-wrap ">
