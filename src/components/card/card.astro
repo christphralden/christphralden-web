@@ -15,15 +15,16 @@ interface Props {
 const {imageSrc, imageAlt, title, category, role, description="", route=""} = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif,webp}')
 ---
-
+<!-- data-astro-history="auto | push | replace" -->
 <a href={`/works/professional/${route}/`} class="no-select">
 	<div class="w-full h-[600px] flex flex-col gap-4 group overflow-hidden">
 		<div class="w-full h-full overflow-hidden relative">
 			{imageSrc != null ?
 				<Image
+					transition:name={`${title}`}
 					src={images[imageSrc]()}
 					alt={imageAlt}
-					class="object-cover group-hover:translate-x-4 scale-[1.1] transition-all duration-500 ease-out w-full h-full flex-shrink no-select rasterize"
+					class="object-cover group-hover:translate-x-4 md:scale-100 transition-all duration-500 ease-out w-full h-full flex-shrink no-select rasterize"
 				/>
 				:
 				<div class="bg-gray-200 w-full h-full flex justify-center items-center">

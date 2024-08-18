@@ -22,4 +22,9 @@ gallery:
   - "/images/screenshot2.png"
   - "/images/screenshot3.png"
 route: "easywork"
+stack:
+  - "Nextjs"
+  - "PineconeDB"
+  - "OpenAI"
+  - "Tailwind"
 ---
