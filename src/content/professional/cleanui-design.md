@@ -23,4 +23,10 @@ gallery:
   - "/images/screenshot2.png"
   - "/images/screenshot3.png"
 route: "cleanui-design"
+stack:
+  - "Astro"
+  - "React"
+  - "Nextjs"
+  - "GSAP"
+  - "Tailwind"
 ---

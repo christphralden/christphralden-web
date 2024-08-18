@@ -1,5 +1,6 @@
 ---
 import Layout from "@layouts/layout.astro"
+import { Github, Instagram, Linkedin} from '@geist-ui/icons'
 
 const date = new Date().toLocaleString('en-US', {
     timeZone: 'Asia/Jakarta',
@@ -22,35 +23,23 @@ const date = new Date().toLocaleString('en-US', {
                     <h2 class="text-base md:text-lg xl:text-xl min-h-8 text-center uppercase flex justify-center items-center">
                         <span data-text="Full-stack developer & Designer" id="description">&nbsp;</span>
                     </h2>
+
                 </div>
             </div>
             <div class="w-fit flex justify-center items-center">
+                
                 <button id="expandable" class="absolute bg-black z-[999] flex justify-center items-center">
                     <span class="text-sm md:text-base text-white tracking-wider text-center text-nowrap uppercase px-8 py-2 rasterize">view works</span>
                 </button>
             </div>
         </section>
-        <section class="mb-4 w-full text-sm md:text-base flex flex-col">
-            <div class="w-full flex justify-between items-start flex-wrap md:flex-nowrap">
-                <p class="w-full text-nowrap">
-                    <span>
-                        ~/christopheralden04@gmail.com
-                    </span>
-                    <span class="text-gray-400">
-                        contact*
-                    </span>
-                </p> 
-                <p class="text-gray-400 flex-1 w-fit hidden md:block">
-                    {date}
-                </p>
-            </div>
-            <div class="flex gap-2 w-full">
-                <p class="text-[#0000ff]">
-                    >
-                </p>
-                <input class="w-full" type="text" placeholder="send me a message">
-            </div>
-        </section>
+        <section class="w-full mb-8">
+            <section class="w-full flex justify-center items-center gap-4 cursor-pointer">
+                <a href="https://github.com/christphralden/"><Github/></a>
+                <a href="https://instagram.com/christphralden/"><Instagram/></a>
+                <a href="https://www.linkedin.com/in/christphralden/"><Linkedin/></a>
+            </section>
+        </section> 
     </div>
 </Layout>
 
@@ -64,7 +53,7 @@ const date = new Date().toLocaleString('en-US', {
     const description = document.getElementById('description') as HTMLElement
     const descriptionText = description.dataset.text as string
 
-    document.addEventListener('DOMContentLoaded', ()=>{
+    document.addEventListener('astro:page-load', ()=>{
         textGlitch({
             text: descriptionText,
             duration: 20,

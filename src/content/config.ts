@@ -19,7 +19,8 @@ export const portfolioSchema = z.object({
 	features_scope: z.array(z.string()),
 	development_process: z.string(),
 	gallery: gallerySchema,
-});
+	stack: z.array(z.string()).optional()
+})
 
 
 export const portfolioCollection = {

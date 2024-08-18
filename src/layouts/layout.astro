@@ -2,14 +2,16 @@
 import Footer from '@components/footer/footer.astro';
 import {Navbar} from '@components/navbar';
 import {cn} from '@lib/utils/'
+import {ViewTransitions} from 'astro:transitions'
 
 interface Props {
 	title?: string;
 	className?: string
 	footer?: boolean
+	optViewTransitions?: boolean
 }
 
-const { title="Christopher Alden", className="", footer=true } = Astro.props;
+const { title="Christopher Alden", className="", footer=true, optViewTransitions=false} = Astro.props;
 ---
 
 <!doctype html>
@@ -22,10 +24,11 @@ const { title="Christopher Alden", className="", footer=true } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="stylesheet" href="/styles/typography.css">
+		{optViewTransitions && <ViewTransitions/>}
 		<title>{title}</title>
 	</head>
 	<body class={className}>
-		<Navbar client:load/>
+		<Navbar client:only="react" transition:persist/>
 		<div class={cn("bg-background justify-start min-h-[100dvh] flex flex-col w-screen text-sm md:text-base", className)}>
 			<slot />
 		</div>
