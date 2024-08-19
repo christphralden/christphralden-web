@@ -14,7 +14,11 @@ export const Navbar = () => {
             callbackFn: (newText) => {
                 const currentRef = routeRefs.current[index];
                 if (currentRef) {
-                    currentRef.innerText = newText;
+                    try{
+                        currentRef.innerText = newText;
+                    }catch(e){
+                        console.warn('Dont worry about this :)')
+                    }
                 } else {
                     console.error(`Element at index ${index} not found.`);
                 }
