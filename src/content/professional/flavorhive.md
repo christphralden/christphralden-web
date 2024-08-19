@@ -22,4 +22,8 @@ gallery:
   - "/images/screenshot2.png"
   - "/images/screenshot3.png"
 route: "flavorhive"
+stack:
+  - "Nextjs"
+  - "Pocketbase"
+  - "SQLite"
 ---

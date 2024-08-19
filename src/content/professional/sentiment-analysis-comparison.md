@@ -22,4 +22,8 @@ gallery:
   - "/images/screenshot2.png"
   - "/images/screenshot3.png"
 route: "sentiment-analysis-comparison"
+stack:
+  - "Python"
+  - "Tensorflow"
+  - "HuggingFace"
 ---

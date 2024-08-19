@@ -1,6 +1,6 @@
 ---
 import Layout from "@layouts/layout.astro"
-import { Github, Instagram, Linkedin} from '@geist-ui/icons'
+import { FaGithub, FaInstagram, FaLinkedin} from 'react-icons/fa'
 
 const date = new Date().toLocaleString('en-US', {
     timeZone: 'Asia/Jakarta',
@@ -35,9 +35,9 @@ const date = new Date().toLocaleString('en-US', {
         </section>
         <section class="w-full mb-8">
             <section class="w-full flex justify-center items-center gap-4 cursor-pointer">
-                <a href="https://github.com/christphralden/"><Github/></a>
-                <a href="https://instagram.com/christphralden/"><Instagram/></a>
-                <a href="https://www.linkedin.com/in/christphralden/"><Linkedin/></a>
+                <a href="https://github.com/christphralden/"><FaGithub size={25}/></a>
+                <a href="https://instagram.com/christphralden/"><FaInstagram size={25}/></a>
+                <a href="https://www.linkedin.com/in/christphralden/"><FaLinkedin size={25}/></a>
             </section>
         </section> 
     </div>

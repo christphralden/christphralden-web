@@ -24,7 +24,8 @@ gallery:
 route: "easywork"
 stack:
   - "Nextjs"
+  - "Python"
   - "PineconeDB"
   - "OpenAI"
-  - "Tailwind"
+  - "TailwindCSS"
 ---

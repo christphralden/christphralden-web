@@ -22,4 +22,11 @@ gallery:
   - "/images/screenshot2.png"
   - "/images/screenshot3.png"
 route: "travelohi"
+stack:
+  - "React"
+  - "PostgreSQL"
+  - "GoFiber"
+  - "Flask"
+  - "Tensorflow"
+
 ---

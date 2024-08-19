@@ -90,7 +90,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg
             </div>
         </section>
         <h1 class="w-full text-center uppercase text-[#0000ff] text-base md:text-lg xl:text-xl">[&nbsp;Study Case&nbsp;]</h1>
-        <section class="w-full lg:w-full justify-center flex mb-32">
+        <section class="w-full justify-center flex">
             <div class="w-full lg:w-2/3 flex-col flex gap-16">
                 <div class="flex flex-col w-full justify-between gap-2 lg:gap-4 lg:flex-row">
                     <h3 class="text-[#0000ff] uppercase w-full lg:w-1/5">Problem</h3>
@@ -111,7 +111,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg
                     </p>
                 </div>
                 <div class="flex flex-col w-full justify-between gap-2 lg:gap-4 lg:flex-row">
-                    <h3 class="text-[#0000ff] uppercase w-full lg:w-1/5">Features and Scope</h3>
+                    <h3 class="text-[#0000ff] uppercase w-full lg:w-1/5">Features and<br/>Scope</h3>
                     <ul class="w-full lg:w-4/5">
                         {parsedPage.features_scope.map(fs => (
                             <div class="flex items-center gap-2">
