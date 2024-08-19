@@ -46,6 +46,7 @@ const date = new Date().toLocaleString('en-US', {
 <script>
     import { textGlitch } from "@lib/animations/text-effect";
     import { gsapProvider } from "@lib/animations/gsap";
+import { navigate } from "astro:transitions/client";
 
     const expandable = document.getElementById('expandable') as HTMLElement
     const name = document.getElementById('name') as HTMLElement
@@ -85,7 +86,7 @@ const date = new Date().toLocaleString('en-US', {
                 scale: 1.1,
                 duration: 1.5,
                 onComplete: ()=>{
-                    window.location.href = '/works/professional/'
+                    navigate('/works/professional/')
                 }
             })
         })
