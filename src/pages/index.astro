@@ -55,11 +55,18 @@ const date = new Date().toLocaleString('en-US', {
     const descriptionText = description.dataset.text as string
 
     window.addEventListener("popstate", (event)=>{
+        console.log("es")
         expandable.style.width = 'auto'
         expandable.style.height = 'auto'
     })
 
+    window.onpopstate = () => setTimeout(alert.bind(window, "Pop"), 0);
 
+    document.addEventListener("astro:after-swap", ()=>{
+        console.log("YES")
+        expandable.style.width = 'auto'
+        expandable.style.height = 'auto'
+    })
     document.addEventListener('astro:page-load', ()=>{
         expandable.style.width = 'auto'
         expandable.style.height = 'auto'
