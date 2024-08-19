@@ -8,7 +8,7 @@ export const NavbarRoutes = [
         route:["/works/professional/"]
     },
     {
-        name:"experience",
-        route:["/experience/"]
+        name:"about me",
+        route:["/about-me/"]
     },
 ]

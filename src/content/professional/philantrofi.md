@@ -22,4 +22,8 @@ gallery:
   - "/images/screenshot2.png"
   - "/images/screenshot3.png"
 route: "philantrofi"
+stack:
+  - "Motoko"
+  - "React"
+  - "Tailwind"
 ---
