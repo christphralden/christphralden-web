@@ -5,7 +5,6 @@ import type { ImageMetadata } from "astro";
 import { portfolioSchema } from '@content/config';
 import { ZodError } from 'zod';
 import { getAllCollections } from '@lib/utils/content';
-import Separator from "@components/ui/separator.astro";
 
 export async function getStaticPaths() {
     const content = await getAllCollections();
@@ -41,19 +40,21 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg
 ---
 <Layout optViewTransitions>
 
-	<div class="w-full min-h-screen h-full pt-36 flex flex-col px-4 md:px-8 xl:px-16 py-8 gap-32">
+	<div class="w-full min-h-screen h-full pt-20 lg:pt-36 flex flex-col px-4 md:px-8 xl:px-16 py-8 gap-32">
         <section class="w-full h-full flex flex-col lg:flex-row gap-8">
             <div class="w-full h-full lg:h-[80dvh] overflow-clip">
                 <Image transition:persist transition:name=`${parsedPage.title}` src={images[parsedPage.mockup]()} alt={parsedPage.title} class="w-full scale-[1.1] md:scale-100 h-full min-h-[600px] object-cover rasterize"/> 
             </div>
             <aside class="w-full lg:w-[700px] flex flex-col gap-8">
-                <h1 class="text-start text-7xl md:text-8xl xl:text-9xl tracking-tighter uppercase font-medium flex justify-start items-center flex-wrap ">
-                    {parsedPage.name}
-                </h1>
-                
-                <h2 class="w-full wrapping">
-                    {parsedPage.description}
-                </h2>
+                <div class="flex flex-col gap-4">
+                    <h1 class="text-start text-7xl md:text-8xl xl:text-9xl tracking-tighter uppercase font-medium flex justify-start items-center flex-wrap ">
+                        {parsedPage.name}
+                    </h1>
+                    
+                    <h2 class="w-full wrapping">
+                        {parsedPage.description}
+                    </h2>
+                </div>
                 <div class="w-full h-fit flex gap-2 justify-between">
                     <h3 class="uppercase text-gray-400">Role</h3>
                     <p>
@@ -61,7 +62,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg
                     </p> 
                 </div>
                 <div class="flex justify-between">
-                    <h1 class="text-gray-400 uppercase">Tools used</h1>
+                    <h1 class="text-gray-400 uppercase">Tech used</h1>
                     <ul class="text-end">
                         {parsedPage.stack?.map(tech => (
                             <li>{tech}</li>
