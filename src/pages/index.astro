@@ -86,7 +86,9 @@ import { navigate } from "astro:transitions/client";
                 scale: 1.1,
                 duration: 1.5,
                 onComplete: ()=>{
-                    navigate('/works/professional/')
+                    navigate('/works/professional/', {
+                        history:'replace'
+                    })
                 }
             })
         })
