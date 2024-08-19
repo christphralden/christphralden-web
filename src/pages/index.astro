@@ -46,13 +46,19 @@ const date = new Date().toLocaleString('en-US', {
 <script>
     import { textGlitch } from "@lib/animations/text-effect";
     import { gsapProvider } from "@lib/animations/gsap";
-import { navigate } from "astro:transitions/client";
+    import { navigate } from "astro:transitions/client";
 
     const expandable = document.getElementById('expandable') as HTMLElement
     const name = document.getElementById('name') as HTMLElement
     const nameText = name.innerText
     const description = document.getElementById('description') as HTMLElement
     const descriptionText = description.dataset.text as string
+
+    window.addEventListener("popstate", (event)=>{
+        expandable.style.width = 'auto'
+        expandable.style.height = 'auto'
+    })
+
 
     document.addEventListener('astro:page-load', ()=>{
         expandable.style.width = 'auto'
