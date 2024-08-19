@@ -54,19 +54,25 @@ const date = new Date().toLocaleString('en-US', {
     const description = document.getElementById('description') as HTMLElement
     const descriptionText = description.dataset.text as string
 
-        function pageShown(evt:any){
-            expandable.style.width = 'auto'
-            expandable.style.height = 'auto'
-        }
+    function pageShown() {
+        resetExpandableStyles();
+    }
 
-        function pageHidden(evt:any){
-            expandable.style.width = 'auto'
-            expandable.style.height = 'auto'
-        }
+    function pageHidden() {
+        resetExpandableStyles();
+    }
 
-            window.addEventListener("pageshow", pageShown, false);
-            window.addEventListener("pagehide", pageHidden, false);
+    function resetExpandableStyles() {
+        expandable.style.width = 'auto';
+        expandable.style.height = 'auto';
+        expandable.style.top = 'auto';
+        expandable.style.left = 'auto';
+        expandable.style.zIndex = '';
+        expandable.style.transform = ''; 
+    }
 
+    window.addEventListener("pageshow", pageShown, false);
+    window.addEventListener("pagehide", pageHidden, false);
     document.addEventListener('astro:page-load', ()=>{
         
         textGlitch({
