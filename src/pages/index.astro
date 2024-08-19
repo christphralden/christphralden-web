@@ -54,6 +54,8 @@ const date = new Date().toLocaleString('en-US', {
     const descriptionText = description.dataset.text as string
 
     document.addEventListener('astro:page-load', ()=>{
+        expandable.style.width = 'auto'
+        expandable.style.height = 'auto'
         textGlitch({
             text: descriptionText,
             duration: 20,
