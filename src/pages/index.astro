@@ -54,22 +54,20 @@ const date = new Date().toLocaleString('en-US', {
     const description = document.getElementById('description') as HTMLElement
     const descriptionText = description.dataset.text as string
 
-    window.addEventListener("popstate", (event)=>{
-        console.log("es")
-        expandable.style.width = 'auto'
-        expandable.style.height = 'auto'
-    })
+        function pageShown(evt:any){
+            expandable.style.width = 'auto'
+            expandable.style.height = 'auto'
+        }
 
-    window.onpopstate = () => setTimeout(alert.bind(window, "Pop"), 0);
+        function pageHidden(evt:any){
+            expandable.style.width = 'auto'
+            expandable.style.height = 'auto'
+        }
 
-    document.addEventListener("astro:after-swap", ()=>{
-        console.log("YES")
-        expandable.style.width = 'auto'
-        expandable.style.height = 'auto'
-    })
+            window.addEventListener("pageshow", pageShown, false);
+            window.addEventListener("pagehide", pageHidden, false);
     document.addEventListener('astro:page-load', ()=>{
-        expandable.style.width = 'auto'
-        expandable.style.height = 'auto'
+        
         textGlitch({
             text: descriptionText,
             duration: 20,
