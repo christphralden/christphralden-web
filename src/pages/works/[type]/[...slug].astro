@@ -8,7 +8,7 @@ import { getAllCollections } from '@lib/utils/content';
 
 export async function getStaticPaths() {
     const content = await getAllCollections();
-    const paths =  content.map((entry) => ({
+    const paths = content.map((entry) => ({
         params: { 
             type: entry.collection,
             slug: entry.slug,
@@ -40,11 +40,11 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg
 ---
 <Layout optViewTransitions>
 
-	<div class="w-full min-h-screen h-full pt-24 lg:pt-36 flex flex-col px-4 md:px-8 xl:px-16 py-8 gap-32">
+    <div class="w-full min-h-screen h-full pt-24 lg:pt-36 flex flex-col px-4 md:px-8 xl:px-16 py-8 gap-32">
         <section class="w-full h-fit flex-col flex gap-8">
             <div class="w-full h-[87dvh] lg:h-[80dvh] lg:flex-row flex flex-col gap-8 overflow-hidden">
                 <div class="w-full flex-1 overflow-hidden">
-                    <Image transition:persist transition:name=`${parsedPage.title}`  src={images[parsedPage.mockup]()} alt={parsedPage.title} class="w-full h-full object-cover"/>
+                    <Image transition:persist transition:name=`${parsedPage.title}` src={images[parsedPage.mockup]()} alt={parsedPage.title} class="w-full h-full object-cover" />
                 </div>    
                 <div class="flex flex-col gap-8 lg:w-1/3 lg:max-w-[500px]">
                     <div class="flex flex-col w-full gap-4">
@@ -96,7 +96,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg
                         {parsedPage.problem}
                     </p>
                 </div>
-                <div class="flex flex-col w-full justify-between gap-2 lg:gap-4  lg:flex-row">
+                <div class="flex flex-col w-full justify-between gap-2 lg:gap-4 lg:flex-row">
                     <h3 class="text-[#0000ff] uppercase w-full lg:w-1/5">Solution</h3>
                     <p class="w-full lg:w-4/5">
                         {parsedPage.solution}
@@ -111,7 +111,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg
                 <div class="flex flex-col w-full justify-between gap-2 lg:gap-4 lg:flex-row">
                     <h3 class="text-[#0000ff] uppercase w-full lg:w-1/5">Features and Scope</h3>
                     <ul class="w-full lg:w-4/5">
-                        {parsedPage.features_scope.map(fs =>(
+                        {parsedPage.features_scope.map(fs => (
                             <div class="flex items-center gap-2">
                                 <div class="w-1 h-1 bg-[#0000ff]"></div>
                                 <li>{fs}</li>
@@ -120,40 +120,39 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg
                     </ul>
                 </div>
             </div>
-            
         </section>
         <h1 class="w-full text-center uppercase text-[#0000ff] text-base md:text-lg xl:text-xl">[Project Gallery]</h1>
-        <section class="w-full">
-            <div class="w-full flex-col relative h-[500px] md:flex-row flex gap-4">
-                <Image src={images[parsedPage.mockup]()} alt={parsedPage.title} class="md:w-1/4 w-full object-cover rasterize"/> 
-                <Image src={images[parsedPage.mockup]()} alt={parsedPage.title} class="w-full md:w-2/4 object-cover rasterize"/> 
-                <Image src={images[parsedPage.mockup]()} alt={parsedPage.title} class="md:w-1/4 w-full object-cover rasterize"/> 
-            </div>
-        </section>
+        <div class="responsive-container flex-col relative h-fit md:h-[550px] md:flex-row flex gap-4 overflow-hidden">
+            <Image src={images[parsedPage.mockup]()} alt={parsedPage.title} class="image w-full md:w-1/4 object-cover rasterize" />
+            <Image src={images[parsedPage.mockup]()} alt={parsedPage.title} class="image w-full md:w-2/4 object-cover rasterize" />
+            <Image src={images[parsedPage.mockup]()} alt={parsedPage.title} class="image w-full md:w-1/4 object-cover rasterize" />
+        </div>
     </div>
     
 </Layout>
 
 <style>
-    .wrapping{
-        text-wrap: pretty;
+    .wrapping {
+        overflow-wrap: break-word;
+    }
+
+    .image {
+        flex-grow: 1; 
+        height: 100%; 
+        object-fit: cover; 
+    }
+
+    @media (min-width: 768px) {
+        .responsive-container {
+            width: calc(100vw - 2rem);
+            transform: translateX(-1rem); 
+        }
+    }
+
+    @media (min-width: 1280px) {
+        .responsive-container {
+            width: calc(100vw - 2rem);
+            transform: translateX(-3rem); 
+        }
     }
 </style>
-<script>
-    // import { gsapProvider } from "@lib/animations/gsap";
-    // document.addEventListener('DOMContentLoaded', ()=>{
-    //     const bg = document.getElementById('bg') as HTMLElement;
-    //     const content = document.getElementById('content') as HTMLElement;
-
-    //     gsapProvider.instance.to(bg, {
-    //         scale: 0.75,
-    //         ease: "expo.inOut",
-    //         scrollTrigger: {
-    //             trigger: content,
-    //             start: "top top",
-    //             end: "bottom bottom",
-    //             scrub: true
-    //         }
-    //     });
-    // });
-</script>
