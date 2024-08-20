@@ -68,7 +68,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg
                             {parsedPage.description}
                         </h2> 
                         <ul class="flex items-end gap-2 flex-wrap pr-4">{parsedPage.stack?.map(tech => (
-                            <li class="hover:text-[#0000ff] hover:border-[#0000ff] text-end p-1 px-2 w-fit border-black border-[1px] rounded-md text-xs uppercase cursor-pointer no-select tracking-wide ">
+                            <li class="hover:text-[#0000ff] hover:border-[#0000ff] text-end p-1 px-2 w-fit border-black border-[1px] rounded-md text-xs uppercase  no-select tracking-wide ">
                                 #{tech}
                             </li>
                         ))}
@@ -81,7 +81,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg
                     {parsedPage.description}
                 </h2>
                 <ul class="flex items-end gap-2 flex-wrap pr-4">{parsedPage.stack?.map(tech => (
-                    <li class="hover:text-[#0000ff] hover:border-[#0000ff] text-end p-1 px-2 w-fit border-black border-[1px] rounded-md text-xs uppercase cursor-pointer no-select tracking-wide">
+                    <li class="hover:text-[#0000ff] hover:border-[#0000ff] text-end p-1 px-2 w-fit border-black border-[1px] rounded-md text-xs uppercase no-select tracking-wide">
                         #{tech}
                     </li>
                 ))}

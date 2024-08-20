@@ -13,7 +13,7 @@ const date = new Date().toLocaleString('en-US', {
 ---
 
 <Layout className="overflow-hidden" footer={false}>
-    <div class="w-full h-[100dvh] flex flex-col p-4 md:px-8 xl:px-16 gap-8">
+    <div class="w-full h-[100dvh] flex flex-col p-4 md:px-8 xl:px-16 gap-8 relative">
         <section class="w-full h-full flex flex-col flex-shrink justify-center items-center gap-16">
             <div class="w-fit flex flex-col justify-center items-center">
                 <div class="w-fit flex flex-col justify-center items-center">
@@ -33,12 +33,12 @@ const date = new Date().toLocaleString('en-US', {
                 </button>
             </div>
         </section>
-        <section class="w-full mb-8">
-            <section class="w-full flex justify-center items-center gap-4 cursor-pointer">
+        <section class="w-full h-fit mb-8 absolute bottom-0 left-0">
+            <div class="w-full flex justify-center items-center gap-4 cursor-pointer">
                 <a href="https://github.com/christphralden/"><FaGithub size={25}/></a>
                 <a href="https://instagram.com/christphralden/"><FaInstagram size={25}/></a>
                 <a href="https://www.linkedin.com/in/christphralden/"><FaLinkedin size={25}/></a>
-            </section>
+            </div>
         </section> 
     </div>
 </Layout>
@@ -101,7 +101,6 @@ const date = new Date().toLocaleString('en-US', {
                 ease: 'expo.inOut',
                 top: 0,
                 left: 0,
-                scale: 1.1,
                 duration: 1.5,
                 onComplete: ()=>{
                     navigate('/works/professional/', {

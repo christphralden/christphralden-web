@@ -58,8 +58,8 @@
 			},
 			{
 				"imageSrc": "/src/assets/rmcs-mockup.png",
-				"imageAlt": "Sentiment Analysis Research Paper",
-				"title": "Sentiment Analysis Research Paper",
+				"imageAlt": "Sentiment Analysis Research",
+				"title": "Sentiment Analysis Research",
 				"category": "NLP, Sentiment Analysis",
 				"role": "Research",
 				"description": "",
