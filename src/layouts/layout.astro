@@ -88,4 +88,21 @@ const { title="Christopher Alden", className="", footer=true, optViewTransitions
 		user-select: none;
 	}
 </style>
-
+<script >
+	
+	import LocomotiveScroll from 'locomotive-scroll';
+	const options = {
+			wrapper: window,
+			content: document.documentElement,
+			lerp: 0.3,
+			duration: 0.3,
+			orientation: 'vertical',
+			gestureOrientation: 'vertical',
+			smoothWheel: true,
+			smoothTouch: false,
+			wheelMultiplier: 2,
+			touchMultiplier: 2,
+			normalizeWheel: true,
+	}
+	const locomotiveScroll = new LocomotiveScroll(options);
+</script>

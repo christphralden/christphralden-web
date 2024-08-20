@@ -21,6 +21,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg
 		<div class="w-full h-full overflow-hidden relative">
 			{imageSrc != null ?
 				<Image
+					draggable={false}
 					transition:name={`${title}`}
 					src={images[imageSrc]()}
 					alt={imageAlt}
