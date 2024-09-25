@@ -64,9 +64,9 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg
                         </div>
                     </div>
                     <div class="flex-col gap-4 hidden lg:flex">
-                        <h2 class="w-full wrapping">
+                        <p class="w-full wrapping">
                             {parsedPage.description}
-                        </h2> 
+                        </p> 
                         <ul class="flex items-end gap-2 flex-wrap pr-4">{parsedPage.stack?.map(tech => (
                             <li class="hover:text-[#0000ff] hover:border-[#0000ff] text-end p-1 px-2 w-fit border-black border-[1px] rounded-md text-xs uppercase  no-select tracking-wide ">
                                 #{tech}
@@ -77,38 +77,38 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg
                 </div>
             </div>
             <div class="flex-col gap-4 flex lg:hidden">
-                <h2 class="w-full wrapping -mt-4">
+                <p class="w-full wrapping -mt-4">
                     {parsedPage.description}
-                </h2>
+                </p>
                 <ul class="flex items-end gap-2 flex-wrap pr-4">{parsedPage.stack?.map(tech => (
                     <li class="hover:text-[#0000ff] hover:border-[#0000ff] text-end p-1 px-2 w-fit border-black border-[1px] rounded-md text-xs uppercase no-select tracking-wide">
-                        #{tech}
+                        <span>#{tech}</span>
                     </li>
                 ))}
                 </ul> 
             </div>
         </section>
-        <h1 class="w-full text-center uppercase text-[#0000ff] text-base md:text-lg xl:text-xl">[&nbsp;Case Study&nbsp;]</h1>
+        <h2 class="w-full text-center uppercase text-[#0000ff] text-base md:text-lg xl:text-xl">[&nbsp;Case Study&nbsp;]</h1>
         <section class="w-full justify-center flex">
             <div class="w-full lg:w-2/3 flex-col flex gap-16">
-                <div class="flex flex-col w-full justify-between gap-2 lg:gap-4 lg:flex-row">
+                <article class="flex flex-col w-full justify-between gap-2 lg:gap-4 lg:flex-row">
                     <h3 class="text-[#0000ff] uppercase w-full lg:w-1/5">Problem</h3>
                     <p class="w-full lg:w-4/5">
                         {parsedPage.problem}
                     </p>
-                </div>
-                <div class="flex flex-col w-full justify-between gap-2 lg:gap-4 lg:flex-row">
+                </article>
+                <article class="flex flex-col w-full justify-between gap-2 lg:gap-4 lg:flex-row">
                     <h3 class="text-[#0000ff] uppercase w-full lg:w-1/5">Solution</h3>
                     <p class="w-full lg:w-4/5">
                         {parsedPage.solution}
                     </p>
-                </div>
-                <div class="flex flex-col w-full justify-between gap-2 lg:gap-4 lg:flex-row">
+                </article>
+                <article class="flex flex-col w-full justify-between gap-2 lg:gap-4 lg:flex-row">
                     <h3 class="text-[#0000ff] uppercase w-full lg:w-1/5">Dev</h3>
                     <p class="w-full lg:w-4/5">
                         {parsedPage.development_process}
                     </p>
-                </div>
+                </article>
                 <div class="flex flex-col w-full justify-between gap-2 lg:gap-4 lg:flex-row">
                     <h3 class="text-[#0000ff] uppercase w-full lg:w-1/5">Features and<br/>Scope</h3>
                     <ul class="w-full lg:w-4/5">
@@ -129,7 +129,6 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg
             <Image draggable={false} src={images[parsedPage.mockup]()} alt={parsedPage.title} class="image w-full md:w-1/4 object-cover rasterize" />
         </div>
     </div>
-    
 </Layout>
 
 <style>

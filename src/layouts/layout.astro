@@ -3,6 +3,7 @@ import Footer from '@components/footer/footer.astro';
 import {Navbar} from '@components/navbar';
 import {cn} from '@lib/utils/'
 import {ViewTransitions} from 'astro:transitions'
+import { Analytics } from '@vercel/analytics/react';
 
 interface Props {
 	title?: string;
@@ -20,6 +21,13 @@ const { title="Christopher Alden", className="", footer=true, optViewTransitions
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Christopher Alden is a fullstack developer and a designer. Portfolio website containing his previous works." />
+    <meta name="keywords" content="web developer jakarta, agency website design, minimalist website design, portfolio website, Christopher Alden, clean website design, swiss style web design">
+
+
+    <meta property="og:title" content="Christopher Alden - Fullstack Developer & Designer">
+    <meta property="og:description" content="Check out Christopher Alden's portfolio showcasing web development and design work.">
+    <meta property="og:type" content="website">
+    
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
@@ -33,6 +41,8 @@ const { title="Christopher Alden", className="", footer=true, optViewTransitions
 			<slot />
 		</div>
 		{footer && <Footer/>}
+    <Analytics mode={'production'} client:load/>;
+
 	</body>
 
 </html>
@@ -105,4 +115,19 @@ const { title="Christopher Alden", className="", footer=true, optViewTransitions
 			normalizeWheel: true,
 	}
 	const locomotiveScroll = new LocomotiveScroll(options);
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Christopher Alden",
+  "jobTitle": "Fullstack Developer and Designer",
+  "url": "https://christopheralden.dev",
+  "sameAs": [
+    "https://github.com/christphralden/",
+    "https://www.linkedin.com/in/christphralden/",
+    "https://instagram.com/christphralden/"
+  ]
+}
 </script>
