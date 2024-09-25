@@ -12,7 +12,7 @@ interface Props {
 	route?: string
 }
 
-const {imageSrc, imageAlt, title, category, role, description="", route=""} = Astro.props;
+const {imageSrc, imageAlt, title, category, role, route=""} = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif,webp}')
 ---
 <!-- data-astro-history="auto | push | replace" -->

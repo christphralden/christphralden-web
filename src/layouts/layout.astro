@@ -41,8 +41,7 @@ const { title="Christopher Alden", className="", footer=true, optViewTransitions
 			<slot />
 		</div>
 		{footer && <Footer/>}
-    <Analytics mode={'production'} client:load/>;
-
+    <Analytics mode={'production'} client:load/>
 	</body>
 
 </html>
@@ -117,7 +116,7 @@ const { title="Christopher Alden", className="", footer=true, optViewTransitions
 	const locomotiveScroll = new LocomotiveScroll(options);
 </script>
 
-<script type="application/ld+json">
+<script is:inline type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
