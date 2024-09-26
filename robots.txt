@@ -1,0 +1,13 @@
+User-agent: *
+Disallow:
+
+User-agent: BadBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+Sitemap: https://christopheralden.dev/sitemap.xml
