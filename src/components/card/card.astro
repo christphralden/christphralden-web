@@ -17,19 +17,19 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg
 ---
 <!-- data-astro-history="auto | push | replace" -->
 <a href={`/works/professional/${route}/`} class="no-select">
-	<div class="w-full h-[600px] flex flex-col gap-4 group overflow-hidden">
-		<div class="w-full h-full overflow-hidden relative">
+	<div class="w-full h-[600px] xl:h-full flex flex-col gap-4 group overflow-hidden">
+		<div class="w-full h-full overflow-hidden relative aspect-square">
 			{imageSrc != null ?
 				<Image
 					draggable={false}
 					transition:name={`${title}`}
 					src={images[imageSrc]()}
 					alt={imageAlt}
-					class="object-cover scale-100 hover:grayscale-0 lg:grayscale w-full h-full flex-shrink no-select rasterize"
+					class="object-cover hover:grayscale-0 lg:grayscale w-full h-full flex-1 no-select rasterize transition-all duration-500 ease-out"
 				/>
 				:
-				<div class="bg-gray-200 w-full h-full flex justify-center items-center">
-					<p class="uppercase group-hover:text-[#0000ff] text-gray-400">[404] No documentation yet</p>
+				<div class="bg-gray-200 w-full h-full flex justify-center items-center flex-1 ">
+					<p class="uppercase group-hover:text-[#0000ff] text-gray-400 ">[404] No documentation yet</p>
 				</div>
 			}
 		</div>

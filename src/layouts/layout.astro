@@ -22,27 +22,28 @@ const { title="Christopher Alden", className="", footer=true, optViewTransitions
 		<meta charset="UTF-8" />
 
 		<meta name="description" content="Christopher Alden is a fullstack developer and a designer. Portfolio website containing his previous works." />
-    <meta name="keywords" content="web developer jakarta, agency website design, minimalist website design, portfolio website, Christopher Alden, clean website design, swiss style web design">
+		<meta name="keywords" content="web developer jakarta, agency website design, minimalist website design, portfolio website, Christopher Alden, clean website design, swiss style web design">
 
-    <meta property="og:title" content="Christopher Alden - Fullstack Developer & Designer">
-    <meta property="og:description" content="Check out Christopher Alden's portfolio showcasing web development and design work.">
-    <meta property="og:type" content="website">
+		<meta property="og:title" content="Christopher Alden - Fullstack Developer & Designer">
+		<meta property="og:description" content="Check out Christopher Alden's portfolio showcasing web development and design work.">
+		<meta property="og:type" content="website">
     
 		<meta name="viewport" content="width=device-width" />
-    <link rel="sitemap" href="/sitemap-index.xml" />
+		<link rel="sitemap" href="/sitemap-index.xml" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="stylesheet" href="/styles/typography.css">
 		{optViewTransitions && <ViewTransitions/>}
 		<title>{title}</title>
 	</head>
+
 	<body class={className}>
-		<Navbar client:only="react" transition:persist/>
+		<Navbar client:only="react"/>
 		<div class={cn("bg-background justify-start min-h-[100dvh] flex flex-col w-screen text-sm md:text-base", className)}>
 			<slot />
 		</div>
 		{footer && <Footer/>}
-    <Analytics mode={'production'} client:load/>
+		<Analytics mode={'production'} client:load/>
 	</body>
 
 </html>
@@ -119,15 +120,15 @@ const { title="Christopher Alden", className="", footer=true, optViewTransitions
 
 <script is:inline type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Christopher Alden",
-  "jobTitle": "Fullstack Developer and Designer",
-  "url": "https://christopheralden.dev",
-  "sameAs": [
-    "https://github.com/christphralden/",
-    "https://www.linkedin.com/in/christphralden/",
-    "https://instagram.com/christphralden/"
-  ]
+	"@context": "https://schema.org",
+	"@type": "Person",
+	"name": "Christopher Alden",
+	"jobTitle": "Fullstack Developer and Designer",
+	"url": "https://christopheralden.dev",
+	"sameAs": [
+		"https://github.com/christphralden/",
+		"https://www.linkedin.com/in/christphralden/",
+		"https://instagram.com/christphralden/"
+	]
 }
 </script>
