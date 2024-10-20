@@ -30,7 +30,6 @@ const { title="Christopher Alden", className="", footer=true, optViewTransitions
     
 		<meta name="viewport" content="width=device-width" />
 		<link rel="sitemap" href="/sitemap-index.xml" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="stylesheet" href="/styles/typography.css">
 		{optViewTransitions && <ViewTransitions/>}
@@ -49,6 +48,9 @@ const { title="Christopher Alden", className="", footer=true, optViewTransitions
 </html>
 
 <style is:global>
+  .medium{
+    font-family: Medium
+  }
 	::-webkit-scrollbar-track {
 		background-color: transparent;
 	}

@@ -38,7 +38,7 @@ const parsedPage = parsePortfolio(entry.data);
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif,webp}')
 
 ---
-<Layout optViewTransitions>
+<Layout optViewTransitions title={parsedPage.title}>
 
     <div class="w-full min-h-screen h-full pt-20 md:pt-24 lg:pt-28 xl:pt-32 flex flex-col px-4 md:px-8 xl:px-16 py-8 gap-32">
         <section class="w-full h-fit flex-col flex gap-12 lg:gap-8">
