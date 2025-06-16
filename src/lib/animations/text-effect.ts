@@ -17,7 +17,7 @@ export async function textGlitch({
   const initial = text;
   let memoizedText: string[] = [];
   if (!hidden) {
-    memoizedText = [...initial];
+    memoizedText = initial.split("");
   }
   const initialPassDuration = duration / 2;
 

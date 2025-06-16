@@ -80,9 +80,12 @@ const { title="Christopher Alden", className="", footer=true, optViewTransitions
 		box-sizing: border-box;
 		user-select: text;
 	}
-	a {
-		all: unset;
-	}
+  a {
+    all: unset;
+    display: inline;
+    cursor: pointer;
+    pointer-events: auto;
+  }
 	html {
 		font-family: 'Montreal', monospace;
 	}
@@ -93,9 +96,6 @@ const { title="Christopher Alden", className="", footer=true, optViewTransitions
 		all:unset;
 		cursor: pointer;
 		user-select: none;
-	}
-	a{
-		-webkit-user-drag: none;
 	}
 	.no-select{
 		user-select: none;

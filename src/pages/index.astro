@@ -14,7 +14,7 @@ import { GoArrowRight } from "react-icons/go";
                         <span class="font-medium medium" id="name">Christopher Alden</span>
                     </h1>
                     <h2 class="text-base md:text-lg xl:text-xl min-h-8 text-center uppercase flex justify-center items-center">
-                        <span data-text="Full-stack developer & Designer" id="description">&nbsp;</span>
+                        <span data-text="Frontend Engineer @ Desia" id="description">&nbsp;</span>
                     </h2>
                 </div>
             </div>
@@ -41,31 +41,40 @@ import { GoArrowRight } from "react-icons/go";
     import { gsapProvider } from "@lib/animations/gsap";
     import { navigate } from "astro:transitions/client";
 
-    const name = document.getElementById('name') as HTMLElement
-    const nameText = name.innerText
-    const description = document.getElementById('description') as HTMLElement
-    const descriptionText = description.dataset.text as string
+    const name = document.getElementById('name') as HTMLElement;
+    const nameText = name.innerText;
+    const description = document.getElementById('description') as HTMLElement;
+    const descriptionText = description.dataset.text as string;
 
-    
-    document.addEventListener('astro:page-load', ()=>{
-        
+    document.addEventListener('astro:page-load', () => {
+        const hasAnimated = sessionStorage.getItem('animation:bio');
+
+        if (hasAnimated === 'true') {
+            name.innerText = nameText;
+            description.innerText = descriptionText;
+            return;
+        }
+
         textGlitch({
             text: descriptionText,
             duration: 20,
             glitch: 3,
             hidden: true,
-            callbackFn: (newText)=>{
-                description.innerText = newText
+            callbackFn: (newText) => {
+                description.innerText = newText;
             }
-        })
+        });
 
         textGlitch({
             text: nameText,
             duration: 25,
             glitch: 2,
-            callbackFn: (newText)=>{
-                name.innerText = newText
+            callbackFn: (newText) => {
+                name.innerText = newText;
             }
-        })
-    })
+        });
+
+        sessionStorage.setItem('animation:bio', 'true');
+    });
 </script>
+
